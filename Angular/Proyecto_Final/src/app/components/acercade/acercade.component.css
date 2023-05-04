@@ -2,7 +2,7 @@
   padding: 20px;
 }
 div{
-  background-image: linear-gradient(to top, #ffffff, #e9c5eb, #c194d3);
+  background-color: #e9c5eb;
   text-align: center;
 }
 @media(min-width: 576px){

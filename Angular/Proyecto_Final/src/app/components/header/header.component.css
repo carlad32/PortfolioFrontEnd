@@ -1,0 +1,7 @@
+div{
+  background-image: linear-gradient(to top, #ffffff, #e9c5eb, #c194d3);
+}
+app-redes {
+  float: right;
+  margin-bottom: auto;
+}

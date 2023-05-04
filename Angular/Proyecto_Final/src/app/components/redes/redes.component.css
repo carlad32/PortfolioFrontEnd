@@ -1,0 +1,14 @@
+#redes{
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+#redes a{
+  display: inline-block;
+  margin: 2px;
+}
+.fa-brands{
+  color: rgb(235, 227, 240);
+}

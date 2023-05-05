@@ -8,21 +8,21 @@ div{
 @media(min-width: 576px){
   #foto_perfil{
     position: absolute;
-    width: 10%;
+    width: 6em;
     border-radius: 100%;
     box-shadow: 3px 3px 3px gray;
-    left: 3%;
-    top: 280px;
+    left: 5%;
+    transform: translateY(-50%);
   }
 }
-@media(max-width: 576px){
+@media(max-width: 575px){
   #foto_perfil{
     position: absolute;
-    width: 20%;
+    width: 6em;
     border-radius: 100%;
     box-shadow: 3px 3px 3px gray;
-    left: 30%;
-    top: 310px;
+    left: 33%;
+    transform: translateY(-50%);
   }
 }
 #nombre{

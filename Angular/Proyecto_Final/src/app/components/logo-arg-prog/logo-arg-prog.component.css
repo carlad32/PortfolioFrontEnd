@@ -1,3 +1,33 @@
 #logo-argpro{
   width: 150px;
 }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.redes{
+  margin-right: 0.5em;
+}
+.fa-brands{
+  color: rgb(253, 253, 253);
+  font-size: 1.5em;
+  margin: 5px;
+}
+.btn{
+  border-width: medium;
+}
+
+
+
+/*---Vista de celular---*/
+@media (max-width: 575px){
+  .container{
+    flex-direction: column;
+  }
+  .redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

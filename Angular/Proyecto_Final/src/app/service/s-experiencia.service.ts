@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Experiencia } from '../model/experiencia';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class SExperienciaService {
-  URL ='https://backend-argprog-40e3.onrender.com/explab/';
+  URL = environment.URL + 'explab/';
 
   constructor(private httpClient: HttpClient) { }
 

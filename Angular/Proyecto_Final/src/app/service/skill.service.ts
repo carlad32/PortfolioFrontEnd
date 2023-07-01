@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Skill } from '../model/skill';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
 
-  URL ='https://backend-argprog-40e3.onrender.com/skill/';
+  URL = environment.URL + 'skill/';
 
   constructor(private httpClient: HttpClient) { }
 

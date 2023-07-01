@@ -10,14 +10,14 @@ import { JwtDto } from '../model/jwt-dto';
   providedIn: 'root'
 })
 export class AuthService {
-  URL = 'https://backend-argprog-40e3.onrender.com/auth';
+  URL = 'https://backend-argprog-40e3.onrender.com/auth/';
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-    return this.httpClient.post<any>(this.URL + '/nuevo', nuevoUsuario);
+    return this.httpClient.post<any>(this.URL + 'nuevo', nuevoUsuario);
   }
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-    return this.httpClient.post<JwtDto>(this.URL + '/login', loginUsuario);
+    return this.httpClient.post<JwtDto>(this.URL + 'login', loginUsuario);
   }
 }

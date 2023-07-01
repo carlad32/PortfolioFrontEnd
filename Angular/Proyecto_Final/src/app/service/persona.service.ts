@@ -9,16 +9,16 @@ import { persona } from '../model/persona.model';
 })
 export class PersonaService {
 
-  URL = 'https://backend-argprog-40e3.onrender.com/persona';
+  URL = 'https://backend-argprog-40e3.onrender.com/persona/';
 
   constructor(private httpClient: HttpClient){}
 
   public lista(): Observable<persona[]>{
-    return this.httpClient.get<persona[]>(this.URL + '/lista');
+    return this.httpClient.get<persona[]>(this.URL + 'lista');
   }
 
   public detail(id: number): Observable<persona>{
-    return this.httpClient.get<persona>(this.URL + `/detail/${id}`);
+    return this.httpClient.get<persona>(this.URL + `detail/${id}`);
   }
 
   /*public save(Persona: persona): Observable<any>{
@@ -26,7 +26,7 @@ export class PersonaService {
   }*/
 
   public update(id: number, Persona: persona): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `/update/${id}`, Persona);
+    return this.httpClient.put<any>(this.URL + `update/${id}`, Persona);
   }
 
  /* public delete(id: number): Observable<any>{

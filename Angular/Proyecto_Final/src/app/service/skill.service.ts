@@ -9,27 +9,27 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
 
-  URL ='https://backend-argprog-40e3.onrender.com/skill';
+  URL ='https://backend-argprog-40e3.onrender.com/skill/';
 
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Skill[]>{
-    return this.httpClient.get<Skill[]>(this.URL + '/lista');
+    return this.httpClient.get<Skill[]>(this.URL + 'lista');
   }
 
   public detail(id: number): Observable<Skill>{
-    return this.httpClient.get<Skill>(this.URL + `/detail/${id}`);
+    return this.httpClient.get<Skill>(this.URL + `detail/${id}`);
   }
 
   public save(skill: Skill): Observable<any>{
-    return this.httpClient.post<any>(this.URL + '/create', skill);
+    return this.httpClient.post<any>(this.URL + 'create', skill);
   }
 
   public update(id: number, skill: Skill): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `/update/${id}`, skill);
+    return this.httpClient.put<any>(this.URL + `update/${id}`, skill);
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL + `/delete/${id}`);
+    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }

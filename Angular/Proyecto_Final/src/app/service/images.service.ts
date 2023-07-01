@@ -10,7 +10,7 @@ export class ImagesService {
 
   public uploadImage($event: any, name: string){
     const file = $event.target.files[0]
-    const imgRef = ref(this.storage, 'Imagen/'+ name)
+    const imgRef = ref(this.storage, 'imagen/'+ name)
     uploadBytes(imgRef, file)
     .then(response => {this.getImages()})
     .catch(error => console.log(error)

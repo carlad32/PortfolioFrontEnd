@@ -1,12 +1,19 @@
 <div class="row">
   <h1>Hard & Soft skills</h1>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-secondary" routerLink="/nuevaskill"  *ngIf="isLogged">Agregar HyS</button>
+  </div>
+  <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
     <circle-progress
-        [percent]="90"
+        [percent]="(skill.porcentaje)"
         [radius]="90"
-        [title]="'ANGULAR'"
+        [imageSrc]="''"
+        [showImage]="false"
+        [imageHeight]=""
+        [imageWidth]=""
+        [title]="(skill.nombre)"
         [showSubtitle]="false"
-        [titleColor]="'bold'"
+        [titleColor]="('bold')"
         [titleFontSize]="'30px'"
         [showUnits]="false"
         [outerStrokeWidth]="15"
@@ -16,73 +23,18 @@
         [animation]="true"
         [animationDuration]="800"
     ></circle-progress>
+
+    <div>
+      <td *ngIf="isLogged">
+        <button class="btn btn-success" routerLink="/editskill/{{skill.id}}">
+          <i class="bi bi-pencil-square"></i>EDITAR</button>
+      </td>
+      <td *ngIf="isLogged">
+        <button class="btn btn-danger" (click)="delete(skill.id)">
+          <i class="bi bi-trash3"></i>BORRAR</button>
+      </td>
+    </div>
+
   </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="90"
-        [radius]="90"
-        [title]="'HTML'"
-        [showSubtitle]="false"
-        [titleColor]="'bold'"
-        [titleFontSize]="'30px'"
-        [showUnits]="false"
-        [outerStrokeWidth]="15"
-        [innerStrokeWidth]="5"
-        [outerStrokeColor]="'#c194d3'"
-        [innerStrokeColor]="'#c194d3'"
-        [animation]="true"
-        [animationDuration]="800"
-    ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="70"
-        [radius]="90"
-        [title]="'CSS'"
-        [showSubtitle]="false"
-        [titleColor]="'bold'"
-        [titleFontSize]="'30px'"
-        [showUnits]="false"
-        [outerStrokeWidth]="15"
-        [innerStrokeWidth]="5"
-        [outerStrokeColor]="'#c194d3'"
-        [innerStrokeColor]="'#c194d3'"
-        [animation]="true"
-        [animationDuration]="800"
-    ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="70"
-        [radius]="90"
-        [title]="'JavaScript'"
-        [showSubtitle]="false"
-        [titleColor]="'bold'"
-        [titleFontSize]="'30px'"
-        [showUnits]="false"
-        [outerStrokeWidth]="15"
-        [innerStrokeWidth]="5"
-        [outerStrokeColor]="'#c194d3'"
-        [innerStrokeColor]="'#c194d3'"
-        [animation]="true"
-        [animationDuration]="800"
-    ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="80"
-        [radius]="90"
-        [title]="'BOOSTRAP'"
-        [showSubtitle]="false"
-        [titleColor]="'bold'"
-        [titleFontSize]="'30px'"
-        [showUnits]="false"
-        [outerStrokeWidth]="15"
-        [innerStrokeWidth]="5"
-        [outerStrokeColor]="'#c194d3'"
-        [innerStrokeColor]="'#c194d3'"
-        [animation]="true"
-        [animationDuration]="800"
-    ></circle-progress>
-  </div>
+
 </div>
